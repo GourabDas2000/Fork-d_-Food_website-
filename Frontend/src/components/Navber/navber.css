@@ -1,0 +1,55 @@
+.navber{
+    padding: 20px 0px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navber .logo{
+    width: 150px;
+}
+.navber-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+.navber-right{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.navber button{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.navber button:hover{
+    background-color: #fff4f2;
+}
+.navber .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+.navber li{
+    cursor: pointer;
+}
+
+
+.navber-search-icon{
+    position: relative;
+}
+.navber-search-icon .dot{
+    position: absolute;
+    min-width:  10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
