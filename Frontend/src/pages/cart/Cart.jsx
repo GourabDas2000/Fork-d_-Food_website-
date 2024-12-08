@@ -55,12 +55,12 @@ function Cart() {
             <hr />
             <div className="cart-total-details">
               <p>Deleivery Fee</p>
-              <p>₹{2}</p>
+              <p>₹{getTotalCartAmount() === 0? 0 : 30}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>₹{getTotalCartAmount() && getTotalCartAmount() || 0}</b>
+              <b>₹{getTotalCartAmount() === 0 ? 0  : getTotalCartAmount() + 30}</b>
             </div>
           </div>
           <button onClick={() => { navigate("/placeOrder");}}>PROCEED TO CHECKOUT</button>

@@ -5,8 +5,6 @@ function PlaceOrder() {
 
   const { getTotalCartAmount } = useContext(StoreContext);
   return (
-
-
     <div className="place-order">
       <div className="place-order-left">
         <p className="title">Delivery Information</p>
@@ -26,8 +24,6 @@ function PlaceOrder() {
         <input type="Number" placeholder="phone" name="" id="" />
       </div>
 
-
-
       <div className="place-order-right">
         <div className="cart-total">
           <h2>Cart Totals</h2>
@@ -39,17 +35,17 @@ function PlaceOrder() {
             <hr />
             <div className="cart-total-details">
               <p>Deleivery Fee</p>
-              <p>₹{2}</p>
+              <p>₹{getTotalCartAmount() === 0 ? 0 : 30}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>₹{(getTotalCartAmount() && getTotalCartAmount()) || 0}</b>
+              <b>
+                ₹{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 30}
+              </b>
             </div>
           </div>
-          <button>
-            PROCEED TO PAYMENT
-          </button>
+          <button>PROCEED TO PAYMENT</button>
         </div>
       </div>
     </div>
