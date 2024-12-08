@@ -12,8 +12,12 @@
 .footer-content{
     width: 100%;
     display: grid;
-    grid: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 80px;
+}
+.footer-content-left .footer-logo{
+    width: 3.5rem;
+    height: 3.5rem;
 }
 .footer-content-left , .footer-content-right , .footer-content-center{
     display: flex;
@@ -40,4 +44,14 @@
     margin: 20px 0;
     background-color: gray;
     border: none;
+}
+@media (max-width : 750px) {
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    .footer-copyright{
+        text-align: center;
+    }
 }
