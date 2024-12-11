@@ -1,0 +1,18 @@
+.navber{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4%;
+}
+
+.navber .logo{
+    width: max(10% , 80px);
+}
+
+.navber .profile{
+    width: 40px;
+    border-radius: 50% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

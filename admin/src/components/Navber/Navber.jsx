@@ -1,8 +1,12 @@
 import React from 'react'
+import {assets} from '../../assets/assets.js'
 import './navber.css';
-function Navber() {
+const Navber = () => {
   return (
-    <div>Navber</div>
+    <div className='navber'>
+    <img src={assets.logo} alt="" className="logo" />
+    <img src={assets.profile_image} alt="" className="profile" />
+    </div>
   )
 }
 

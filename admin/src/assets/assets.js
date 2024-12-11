@@ -1,7 +1,7 @@
-import logo from '../../public/admin_assets/logo.png'
+import logo from "../../public/admin_assets/ForkD_Logo.svg";
 import add_icon from '../../public/admin_assets/add_icon.png'
 import order_icon from '../../public/admin_assets/order_icon.png'
-import profile_image from '../../public/admin_assets/profile_image.png'
+import profile_image from '../../public/admin_assets/profile_image.jpg'
 import upload_area from '../../public/admin_assets/upload_area.png'
 import parcel_icon from '../../public/admin_assets/parcel_icon.png'
 
