@@ -1,11 +1,11 @@
 import { createContext, useEffect, useState } from "react";
-import { food_list } from "../assets";
+import axios from 'axios';
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) =>{
     const [cartItems , setcartItems] = useState({}); 
     const [Token , setToken] = useState("")
-
+    const [food_list , setFoodList] = useState([]);
     const addToCart = (itemId) => {
         if(!cartItems[itemId]){
             setcartItems((prev) => ({...prev , [itemId]:1}))
@@ -29,17 +29,30 @@ const StoreContextProvider = (props) =>{
       let totalAmmount = 0;
       for (const item in cartItems) {
         if (cartItems[item] > 0) {
-          let iteminfo = food_list.find((product) => product.id === item);
-          totalAmmount += iteminfo.price * cartItems[item];
+          let iteminfo = food_list.find((product) => product._id === item);
+          if(iteminfo){
+            totalAmmount += iteminfo.price * cartItems[item];
+          } 
+            
         }
       }
       return totalAmmount;
     };
     useEffect(() => {
-      if(localStorage.getItem("token")){
-        setToken(localStorage.getItem("token"))
+      async function loadData() {
+        await fetchFoodList();
+        if(localStorage.getItem("token")){
+          setToken(localStorage.getItem("token"))
+        }
       }
+      loadData();
     },[])
+
+    const url = import.meta.env.VITE_API_URL;
+    const fetchFoodList = async() => {
+      const response = await axios.get(`${url}/api/food/list`);
+      setFoodList(response.data.data)
+    }
 
     const contextValue = {
       food_list,
@@ -49,7 +62,8 @@ const StoreContextProvider = (props) =>{
       removeFromCart,
       getTotalCartAmount,
       Token,
-      setToken
+      setToken,
+      url
     };
 
     
