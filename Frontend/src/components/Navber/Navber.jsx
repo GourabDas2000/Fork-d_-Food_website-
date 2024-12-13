@@ -1,22 +1,25 @@
-import React, { useContext, useState } from 'react';
-import logo from "../../../public/assets/ForkD_Logo.svg";
-import Search_icon from "../../../public/assets/frontend_assets/Search_icon.png";
-import basket_icon from '../../../public/assets/frontend_assets/basket_icon.png';
-import profile_icon from '../../../public/assets/frontend_assets/profile_icon.png';
-import bag_icon from "../../../public/assets/frontend_assets/profile_icon.png";
-import logout_icon from "../../../public/assets/frontend_assets/profile_icon.png";
+import { useContext, useState  } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {Link} from 'react-router-dom';
-import './navber.css';
 import { StoreContext } from '../../context/StoreContext';
+import { assets } from '../../assets';
+import './navber.css';
 
 const Navber = ({setshowlogin}) => {
+  const navigate = useNavigate();
 
   const [menu , setmenu ] = useState("Home");
   const { getTotalCartAmount , Token , setToken } = useContext(StoreContext);
+
+  const logout = async() =>{
+    localStorage.removeItem("token");
+    setToken("");
+    navigate('/');
+  }
   return (
     <div className="navber">
       <Link to="/">
-        <img src={logo} alt="" className="logo" />
+        <img src={assets.logo} alt="" className="logo" />
       </Link>
       <ul className="navber-menu">
         <Link
@@ -57,10 +60,10 @@ const Navber = ({setshowlogin}) => {
         </a>
       </ul>
       <div className="navber-right">
-        <img src={Search_icon} alt="" />
+        <img src={assets.search_icon} alt="" />
         <div className="navber-search-icon">
           <Link to={"/cart"}>
-            <img src={basket_icon} alt="" />
+            <img src={assets.basket_icon} alt="" />
           </Link>
           <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>
@@ -74,15 +77,15 @@ const Navber = ({setshowlogin}) => {
           </button>
         ) : (
           <div className="navber-profile">
-            <img src={profile_icon} alt="" />
+            <img src={assets.profile_icon} alt="" />
             <ul className="nav-profile-dropdown">
               <li>
-                <img src={bag_icon} alt="" />
+                <img src={assets.bag_icon} alt="" />
                 <p>Orders</p>{" "}
               </li>
               <hr />
-              <li>
-                <img src={logout_icon} alt="" />
+              <li onClick={logout}>
+                <img src={assets.logout_icon} alt="" />
                 <p>Logout</p>
               </li>
             </ul>

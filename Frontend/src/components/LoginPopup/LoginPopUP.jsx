@@ -1,14 +1,13 @@
 import React, { useContext, useState } from 'react'
-import cross_icon from '../../../public/assets/frontend_assets/cross_icon.png';
-import './loginpopup.css';
 import { StoreContext } from '../../context/StoreContext';
+import { assets } from '../../assets';
 import axios from 'axios';
-
+import './loginpopup.css';
 
 const LoginPopUP = ({ setshowlogin  }) => {
   const url = import.meta.env.VITE_API_URL;
 
-  const { getTotalCartAmount , Token , setToken } = useContext(StoreContext);
+  const {  Token , setToken } = useContext(StoreContext);
   const[data , setdata] = useState({
     name:"",
     email:"",
@@ -54,7 +53,7 @@ const LoginPopUP = ({ setshowlogin  }) => {
             onClick={() => {
               setshowlogin(false);
             }}
-            src={cross_icon}
+            src={assets.cross_icon}
             alt=""
           />
         </div>

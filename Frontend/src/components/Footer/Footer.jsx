@@ -1,8 +1,5 @@
 import React from 'react';
-import logo from '../../../public/assets/ForkD_Logo.svg';
-import facebook_icon from '../../../public/assets/frontend_assets/facebook_icon.png';
-import twitter_icon from '../../../public/assets/frontend_assets/twitter_icon.png';
-import linkedin_icon from '../../../public/assets/frontend_assets/linkedin_icon.png';
+import { assets } from '../../assets';
 import './footer.css';
 
 const Footer = () => {
@@ -10,12 +7,12 @@ const Footer = () => {
     <div className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-content-left">
-            <img src={logo} className='footer-logo' alt="" />
+            <img src={assets.logo} className='footer-logo' alt="" />
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum, ad odio neque error saepe doloribus temporibus hic architecto odit.</p>
             <div className="footer-icon-social-icons">
-                <img src={facebook_icon} alt="" />
-                <img src={twitter_icon} alt="" />
-                <img src={linkedin_icon} alt="" />
+                <img src={assets.facebook_icon} alt="" />
+                <img src={assets.twitter_icon} alt="" />
+                <img src={assets.linkedin_icon} alt="" />
             </div>
         </div>
 

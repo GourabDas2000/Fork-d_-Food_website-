@@ -38,8 +38,42 @@ import food_29 from "../public/assets/frontend_assets/food_29.png";
 import food_30 from "../public/assets/frontend_assets/food_30.png";
 import food_31 from "../public/assets/frontend_assets/food_31.png";
 import food_32 from "../public/assets/frontend_assets/food_32.png";
-export const rating_starts = {
-  rating_starts: "/assets/frontend_assets/rating_starts.png",
+import logo from "../public/assets/frontend_assets/logo.svg";
+import basket_icon from "../public/assets/frontend_assets/basket_icon.png";
+import header_img from "../public/assets/frontend_assets/header_img.png";
+import search_icon from "../public/assets/frontend_assets/search_icon.png";
+import rating_starts from "../public/assets/frontend_assets/rating_starts.png";
+import add_icon_green from "../public/assets/frontend_assets/add_icon_green.png";
+import add_icon_white from "../public/assets/frontend_assets/add_icon_white.png";
+import remove_icon_red from "../public/assets/frontend_assets/remove_icon_red.png";
+import linkedin_icon from "../public/assets/frontend_assets/linkedin_icon.png";
+import facebook_icon from "../public/assets/frontend_assets/facebook_icon.png";
+import twitter_icon from "../public/assets/frontend_assets/twitter_icon.png";
+import cross_icon from "../public/assets/frontend_assets/cross_icon.png";
+import selector_icon from "../public/assets/frontend_assets/selector_icon.png";
+import profile_icon from "../public/assets/frontend_assets/profile_icon.png";
+import logout_icon from "../public/assets/frontend_assets/logout_icon.png";
+import bag_icon from "../public/assets/frontend_assets/bag_icon.png";
+import parcel_icon from "../public/assets/frontend_assets/parcel_icon.png";
+
+export const assets = {
+  logo,
+  basket_icon,
+  header_img,
+  search_icon,
+  rating_starts,
+  add_icon_green,
+  add_icon_white,
+  remove_icon_red,
+  linkedin_icon,
+  facebook_icon,
+  twitter_icon,
+  cross_icon,
+  selector_icon,
+  profile_icon,
+  logout_icon,
+  bag_icon,
+  parcel_icon,
 };
 
 export const menu_list = [
