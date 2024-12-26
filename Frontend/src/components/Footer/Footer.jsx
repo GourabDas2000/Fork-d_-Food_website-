@@ -1,8 +1,10 @@
 import React from 'react';
 import { assets } from '../../assets';
 import './footer.css';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className="footer" id="footer">
       <div className="footer-content">
@@ -23,7 +25,7 @@ const Footer = () => {
                 <li>Home</li>
                 <li>About us</li>
                 <li>Delivery</li>
-                <li>Privacy policy</li>
+                <li onClick={ () => {navigate('/privacypolicy')}}>Privacy policy</li>
             </ul>
         </div>
 
