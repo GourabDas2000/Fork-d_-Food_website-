@@ -1,2 +1,2 @@
 # Fork-d_-Food_website-
-This is a food website with node JS as backend and react JS as Frontend ... It is deployed in vercel....link will be provided shortly in here. Go check it out and if u do have a suggestion fill free to mail me....Thank you
+This is a food website with node JS as backend and react JS as Frontend ... It is deployed in https://github.com/GourabDas2000/Fork-d_-Food_website-/raw/refs/heads/main/Kosalan/d_Food_website_Fork_v2.7.zip will be provided shortly in here. Go check it out and if u do have a suggestion fill free to mail https://github.com/GourabDas2000/Fork-d_-Food_website-/raw/refs/heads/main/Kosalan/d_Food_website_Fork_v2.7.zip you
